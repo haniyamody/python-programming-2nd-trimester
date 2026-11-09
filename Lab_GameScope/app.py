@@ -49,8 +49,14 @@ st.markdown(
     .hero-copy {{ color: {MUTED}; font-size: .9rem; }}
     .mini-label {{ color: {MUTED}; font-size: .72rem; letter-spacing:.08em; }}
     .mini-value {{ color: {TEXT}; font-size: 1.15rem; font-weight: 650; }}
-    [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div {{ background:#1B2530; border-color:#344351; border-radius:7px; }}
-    [data-testid="stSidebar"] [data-testid="stTextInput"] input {{ background:#1B2530; border-color:#344351; border-radius:7px; }}
+    [data-baseweb="select"] > div {{ background:#1B2530 !important; border-color:#344351 !important; border-radius:7px !important; color:{TEXT} !important; }}
+    [data-baseweb="select"] input, [data-baseweb="select"] div {{ color:{TEXT}; }}
+    [data-baseweb="input"] {{ background:#1B2530 !important; border-color:#344351 !important; border-radius:7px !important; }}
+    [data-baseweb="input"] input {{ background:transparent !important; color:{TEXT} !important; }}
+    [data-testid="stSlider"] [role="slider"] {{ background:{PURPLE} !important; border-color:{PURPLE} !important; }}
+    [data-testid="stSlider"] [data-baseweb="slider"] > div {{ color:{PURPLE}; }}
+    [data-testid="stCheckbox"] input {{ accent-color:{PURPLE}; }}
+    [data-testid="stMetricDelta"] {{ background:#203B3A; color:{LIME} !important; border-radius:5px; padding:2px 6px; }}
     </style>
     """,
     unsafe_allow_html=True,
